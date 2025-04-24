@@ -6,7 +6,7 @@ export default function Home() {
     { nome: "MC Ryan", frase: "Nois come bosta", img: "/ryan.jfif" },
     { nome: "MC Kevin", frase: "Racha a cuca", img: "/kevin.jfif" },
     { nome: "MC IG", frase: "3 dia virado", img: "/ig.jpg" },
-    { nome: "MC LAN", frase: "Vamo ensinar inglês pras pepeka analfabeta", img: "/lan.avif" }
+    { nome: "MC LAN", frase: "Vamo ensinar inglês", img: "/lan.avif" }
   ];
 
   const destaque = [
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="agendamento">
         <h2>Agende seu horário conosco!</h2>
         <p>Escolha o melhor dia e horário para ser atendido com todo o cuidado que você merece.</p>
-        <a href="./pages/agenda" className="btn btn-danger">
+        <a href="/agenda" className="btn btn-danger">
           AGENDE AGORA!!!!!
         </a>
       </div>
@@ -97,7 +97,7 @@ export default function Home() {
       <div className="agendamento">
         <h2>Agende seu horário conosco!</h2>
         <p>Escolha o melhor dia e horário para ser atendido com todo o cuidado que você merece.</p>
-        <a href="./pages/agenda" className="btn btn-danger">
+        <a href="/agenda" className="btn btn-danger">
           AGENDE AGORA!!!!!
         </a>
       </div>
