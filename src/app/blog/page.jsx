@@ -12,7 +12,7 @@ export default function Blog() {
             imagem: "/imagem2.jpg"
         },
         {
-            titulo: "PROMOÇÃO DE CORTES DE CABELLO",
+            titulo: "PROMOÇÃO DE CORTES DE CABELO",
             texto: "Durante o mês de março, todos os cortes de cabelo estão com 20% de desconto. Aproveite a promoção e venha renovar seu visual!",
             imagem: "/imagem3.jpg"
         },

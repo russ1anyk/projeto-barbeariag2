@@ -3,16 +3,16 @@ import "./home.css"
 
 export default function Home() {
   const depoimento = [
-    { nome: "MC Ryan", frase: "Nois come bosta", img: "/ryan.jfif" },
-    { nome: "MC Kevin", frase: "Racha a cuca", img: "/kevin.jfif" },
-    { nome: "MC IG", frase: "3 dia virado", img: "/ig.jpg" },
-    { nome: "MC LAN", frase: "Vamo ensinar inglês", img: "/lan.avif" }
+    { nome: "MC Ryan", frase: "Salve, aqui é o MC Ryan SP! Passando pra dizer que a Barbearia G2 é braba demais. Corte na régua, atendimento de responsa... os caras são visão! Quem quer estilo de verdade, já cola lá. TMJ!", img: "/ryan.jfif" },
+    { nome: "MC Kevin", frase: "Fala tu, tropa! Aqui é o menino maluquinho, MC Kevin! Cê é louco, Barbearia G2 é outro nível, pai! Corte na régua, atendimento chave... os caras são brabos demais. Quem passa lá sai monstro! Esquece!", img: "/kevin.jfif" },
+    { nome: "MC IG", frase: "Salve, salve! Aqui é o IG da DZ7 na voz. Só pra dizer que a Barbearia G2 é pesada, esquece! Corte fino, trato de responsa… os cria deixa a gente chavão. Cola lá e vive essa experiência, tá ligado?", img: "/ig.jpg" },
+    { nome: "MC LAN", frase: "Ae, família! Aqui é o terror dos mandrake, MC Lan! Barbearia G2 é o pique, fi! Corte monstro, atendimento zika… os caras deixam a nave pronta pra decolar! Só colar que é sucesso, tá ligado?", img: "/lan.avif" }
   ];
 
   const destaque = [
-    { nome: "Blindadao", preco: 50, img: "/blindado1.jpg" },
-    { nome: "Blindadao", preco: 50, img: "/blindado2.jfif" },
-    { nome: "Blindadao", preco: 50, img: "/blindado3.jpg" },
+    { nome: "Blindado", preco: 50, img: "/blindado1.jpg" },
+    { nome: "Blindado", preco: 50, img: "/blindado2.jfif" },
+    { nome: "Blindado", preco: 50, img: "/blindado3.jpg" },
   ];
 
   const franquia = [
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <div className="banner">
-        <img src="/banner.jpg" alt="banner" />
+        <img src="/banner.png" alt="banner" />
       </div>
 
       <div className="agendamento">
@@ -75,7 +75,9 @@ export default function Home() {
         </div>
       </div>
 
+
       <div className="fotos">
+        <h2>Nossas Franquias</h2>
         {franquia.map((item, index) => (
           <div className="card mb-3" key={index}>
             <img src={item.img} className="card-img-top" alt={item.cidade} />
