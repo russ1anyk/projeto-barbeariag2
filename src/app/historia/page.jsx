@@ -5,7 +5,7 @@ import "./historia.css";
 export default function Historia() {
     return (
         <>
-            <div className="section">
+            <div className="section1">
                 <img src="/comeco.jpeg" alt="Início da G2 Barbearia" className="image full-width" />
                 <div className="overlay">
                     <h1>O Início de um Sonho</h1>
