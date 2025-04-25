@@ -6,11 +6,12 @@ import Head from 'next/head';
 export default function Home() {
 
   const depoimento = [
-    { nome: "MC Ryan", frase: "Salve, aqui é o MC Ryan SP! Passando pra dizer que a Barbearia G2 é braba demais. Corte na régua, atendimento de responsa... os caras são visão! Quem quer estilo de verdade, já cola lá. TMJ!", img: "/ryan.jfif" },
-    { nome: "MC Kevin", frase: "Fala tu, tropa! Aqui é o menino maluquinho, MC Kevin! Cê é louco, Barbearia G2 é outro nível, pai! Corte na régua, atendimento chave... os caras são brabos demais. Quem passa lá sai monstro! Esquece!", img: "/kevin.jfif" },
-    { nome: "MC IG", frase: "Salve, salve! Aqui é o IG da DZ7 na voz. Só pra dizer que a Barbearia G2 é pesada, esquece! Corte fino, trato de responsa… os cria deixa a gente chavão. Cola lá e vive essa experiência, tá ligado?", img: "/ig.jpg" },
-    { nome: "MC LAN", frase: "Ae, família! Aqui é o terror dos mandrake, MC Lan! Barbearia G2 é o pique, fi! Corte monstro, atendimento zika… os caras deixam a nave pronta pra decolar! Só colar que é sucesso, tá ligado?", img: "/lan.avif" }
+    { nome: "MC Ryan", frase: "Barbearia G2 é braba! Corte na régua e atendimento top. Os caras são visão!", img: "/ryan.jfif" },
+    { nome: "MC Kevin", frase: "Barbearia G2 é outro nível! Corte chave e atendimento monstro. Sai de lá transformado!", img: "/kevin.jfif" },
+    { nome: "MC IG", frase: "Barbearia G2 é pesada! Corte fino e trato de responsa. Os cria deixa a gente chavão!", img: "/ig.jpg" },
+    { nome: "MC LAN", frase: "Barbearia G2 é o pique! Corte monstro e atendimento zika. A nave sai pronta!", img: "/lan.avif" }
   ];
+
 
   const destaque = [
     { nome: "Blindado", preco: 50, img: "/blindado1.jpg" },
@@ -65,32 +66,33 @@ export default function Home() {
 
       <div className="container text-center mt-5">
         <h2>Depoimentos</h2>
-        <div className="row">
-          {depoimento.map((item, index) => (
-            <div className="col" key={index}>
-              <div className="card">
-                <div className="card-header">
-                  <Image
-                    src={item.img}
-                    alt={item.nome}
-                    width={80}
-                    height={80}
-                    className="img-fluid rounded-circle"
-                    style={{ objectFit: 'cover' }}
-                  />
-                  <div>Depoimento de {item.nome}</div>
-                </div>
-                <div className="card-body">
-                  <blockquote className="blockquote mb-0">
-                    <p>{item.frase}</p>
-                  </blockquote>
+        <div className="depoimento">
+          <div className="row">
+            {depoimento.map((item, index) => (
+              <div className="col" key={index}>
+                <div className="card">
+                  <div className="card-header">
+                    <Image
+                      src={item.img}
+                      alt={item.nome}
+                      width={80}
+                      height={80}
+                      className="img-fluid rounded-circle"
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <div>Depoimento de {item.nome}</div>
+                  </div>
+                  <div className="card-body">
+                    <blockquote className="blockquote mb-0">
+                      <p>{item.frase}</p>
+                    </blockquote>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-
 
       <div className="fotos">
         <h2>Nossas Franquias</h2>
