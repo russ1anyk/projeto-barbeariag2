@@ -27,12 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Barbearia G2 - Corte na Régua</title>
-        <meta name="description" content="A barbearia mais braba do Brasil. Corte moderno, atendimento chave e estilo único!" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <div className="banner">
         <img src="/banner.png" alt="banner" />
       </div>
