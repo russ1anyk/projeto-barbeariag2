@@ -1,7 +1,10 @@
 "use client";
-import "./home.css"
+import "./home.css";
+import Image from 'next/image';
+import Head from 'next/head';
 
 export default function Home() {
+
   const depoimento = [
     { nome: "MC Ryan", frase: "Salve, aqui é o MC Ryan SP! Passando pra dizer que a Barbearia G2 é braba demais. Corte na régua, atendimento de responsa... os caras são visão! Quem quer estilo de verdade, já cola lá. TMJ!", img: "/ryan.jfif" },
     { nome: "MC Kevin", frase: "Fala tu, tropa! Aqui é o menino maluquinho, MC Kevin! Cê é louco, Barbearia G2 é outro nível, pai! Corte na régua, atendimento chave... os caras são brabos demais. Quem passa lá sai monstro! Esquece!", img: "/kevin.jfif" },
@@ -23,6 +26,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Barbearia G2 - Corte na Régua</title>
+        <meta name="description" content="A barbearia mais braba do Brasil. Corte moderno, atendimento chave e estilo único!" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="banner">
         <img src="/banner.png" alt="banner" />
       </div>
@@ -61,7 +70,14 @@ export default function Home() {
             <div className="col" key={index}>
               <div className="card">
                 <div className="card-header">
-                  <img src={item.img} alt={item.nome} className="img-fluid rounded-circle" style={{ width: '80px', height: '80px' }} />
+                  <Image
+                    src={item.img}
+                    alt={item.nome}
+                    width={80}
+                    height={80}
+                    className="img-fluid rounded-circle"
+                    style={{ objectFit: 'cover' }}
+                  />
                   <div>Depoimento de {item.nome}</div>
                 </div>
                 <div className="card-body">

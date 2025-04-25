@@ -1,6 +1,4 @@
-/* home.css - tema escuro ajustado */
 
-/* Corrigido: Removido flex no body que quebra o layout de grid */
 body {
     background-color: #000;
     color: #fff;
@@ -9,7 +7,6 @@ body {
     padding: 20px;
 }
 
-/* Banner */
 .banner {
     margin-top: 100px;
 }
@@ -21,7 +18,10 @@ body {
     margin-bottom: 40px;
 }
 
-/* Cards gerais */
+h2{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 .card {
     background-color: #1a1a1a;
     color: white;
@@ -31,7 +31,6 @@ body {
     border-radius: 10px;
 }
 
-/* Cabeçalho dos depoimentos */
 .card-header {
     padding: 1rem;
     background-color: transparent;
@@ -46,19 +45,16 @@ body {
     border: 2px solid #fff;
 }
 
-/* Corpo dos cards */
 .card-body {
     padding: 15px;
 }
 
-/* Seção agendamento */
 .agendamento {
     margin: 60px auto;
     text-align: center;
     width: 80%;
 }
 
-/* Botão */
 .btn-danger {
     background-color: #e50914;
     border: none;
@@ -76,7 +72,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Seção serviços */
 .servicos {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -96,7 +91,6 @@ body {
     max-height: 288px;
 }
 
-/* Seção fotos/franquias */
 .fotos {
     width: 90%;
     margin: 50px auto;
@@ -107,7 +101,6 @@ body {
     border-radius: 10px;
 }
 
-/* Resumo */
 .resumo {
     margin-top: 70px;
     width: 80%;
@@ -118,7 +111,6 @@ body {
     color: #ccc;
 }
 
-/* Responsividade básica */
 @media (max-width: 768px) {
     .card-header img {
         height: 80px;
