@@ -33,11 +33,7 @@ export default function Barbearia() {
         const existe = servicoSelecionado.find((item) => item.id === servico.id);
 
         if (existe) {
-            setServicoSelecionado(
-                servicoSelecionado.map((item) =>
-                    item.id === servico.id ? { ...item } : item
-                )
-            );
+            setServicoSelecionado(servicoSelecionado.filter((item) => item.id !== servico.id));
         } else {
             setServicoSelecionado([...servicoSelecionado, servico]);
         }
@@ -48,7 +44,7 @@ export default function Barbearia() {
         0
     );
 
-    const dataMinima = new Date();  // Data mínima é o dia de hoje
+    const dataMinima = new Date();
 
     return (
         <div className="container">
@@ -64,7 +60,11 @@ export default function Barbearia() {
                                 {barbeiros.map((barbeiro) => (
                                     <button
                                         key={barbeiro.id}
-                                        onClick={() => setBarbeiroSelecionado(barbeiro.id)}
+                                        onClick={() =>
+                                            setBarbeiroSelecionado(
+                                                barbeiroSelecionado === barbeiro.id ? null : barbeiro.id
+                                            )
+                                        }
                                         className={`btn ${barbeiroSelecionado === barbeiro.id ? 'btn-danger' : 'btn-outline-light'}`}
                                     >
                                         <img
@@ -78,7 +78,6 @@ export default function Barbearia() {
                             </div>
                         </div>
                     </div>
-
 
                     {/* Selecao de data */}
                     {barbeiroSelecionado && (
@@ -105,7 +104,11 @@ export default function Barbearia() {
                                     {horarios[barbeiroSelecionado].map((horario, index) => (
                                         <div key={index} className="col-4 col-md-3 col-lg-2">
                                             <button
-                                                onClick={() => setHorarioSelecionado(horario)}
+                                                onClick={() =>
+                                                    setHorarioSelecionado(
+                                                        horarioSelecionado === horario ? null : horario
+                                                    )
+                                                }
                                                 className={`btn w-100 ${horarioSelecionado === horario ? 'btn-danger' : 'btn-outline-light'}`}
                                             >
                                                 {horario}
