@@ -9,6 +9,7 @@ function Banner() {
   const bannerOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const bannerScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.2]);
   const bannerRef = useRef(null);
+  const timestamp = Date.now();
 
   return (
     <motion.div 
@@ -20,7 +21,7 @@ function Banner() {
       exit={{ opacity: 0 }}
     >
       <Image
-        src="/banner.png"
+        src={`/banner.png?t=${timestamp}`}
         alt="Barbearia G2 - Estilo e qualidade em cada corte"
         width={1920}
         height={1080}
