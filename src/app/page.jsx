@@ -64,24 +64,25 @@ function Banner() {
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(null);
+  const timestamp = Date.now();
 
   const depoimento = [
-    { nome: "MC Ryan", frase: "Barbearia G2 é braba! Corte na régua e atendimento top. Os caras são visão!", img: "/ryan.jfif" },
-    { nome: "MC Kevin", frase: "Barbearia G2 é outro nível! Corte chave e atendimento monstro. Sai de lá transformado!", img: "/kevin.jfif" },
-    { nome: "MC IG", frase: "Barbearia G2 é pesada! Corte fino e trato de responsa. Os cria deixa a gente chavão!", img: "/ig.jpg" },
-    { nome: "MC LAN", frase: "Barbearia G2 é o pique! Corte monstro e atendimento zika. A nave sai pronta!", img: "/lan.avif" }
+    { nome: "MC Ryan", frase: "Barbearia G2 é braba! Corte na régua e atendimento top. Os caras são visão!", img: `/ryan.jfif?t=${timestamp}` },
+    { nome: "MC Kevin", frase: "Barbearia G2 é outro nível! Corte chave e atendimento monstro. Sai de lá transformado!", img: `/kevin.jfif?t=${timestamp}` },
+    { nome: "MC IG", frase: "Barbearia G2 é pesada! Corte fino e trato de responsa. Os cria deixa a gente chavão!", img: `/ig.jpg?t=${timestamp}` },
+    { nome: "MC LAN", frase: "Barbearia G2 é o pique! Corte monstro e atendimento zika. A nave sai pronta!", img: `/lan.avif?t=${timestamp}` }
   ];
 
   const destaque = [
-    { nome: "Blindado", preco: 50, img: "/blindado1.jpg", descricao: "Corte moderno com degradê perfeito" },
-    { nome: "Blindado", preco: 50, img: "/blindado2.jfif", descricao: "Estilo único com acabamento impecável" },
-    { nome: "Blindado", preco: 50, img: "/blindado3.jpg", descricao: "Tendência do momento com toque especial" },
+    { nome: "Blindado", preco: 50, img: `/blindado1.jpg?t=${timestamp}`, descricao: "Corte moderno com degradê perfeito" },
+    { nome: "Blindado", preco: 50, img: `/blindado2.jfif?t=${timestamp}`, descricao: "Estilo único com acabamento impecável" },
+    { nome: "Blindado", preco: 50, img: `/blindado3.jpg?t=${timestamp}`, descricao: "Tendência do momento com toque especial" },
   ];
 
   const franquia = [
-    { cidade: "Campinas", img: "/barber1.jpg", historia: "Um ex-cliente virou franqueado e transformou a unidade em um ponto elegante no Cambuí, com foco em networking e cortes modernos." },
-    { cidade: "Santos", img: "/barber2.jpg", historia: "Dois irmãos surfistas abriram uma barbearia com clima praiano, café artesanal e eventos culturais, a poucos passos da praia." },
-    { cidade: "Ribeirão Preto", img: "/barber3.jpg", historia: "Um barbeiro local famoso abriu a unidade com estilo rústico e vibe acolhedora, atraindo de fazendeiros a universitários." }
+    { cidade: "Campinas", img: `/barber1.jpg?t=${timestamp}`, historia: "Um ex-cliente virou franqueado e transformou a unidade em um ponto elegante no Cambuí, com foco em networking e cortes modernos." },
+    { cidade: "Santos", img: `/barber2.jpg?t=${timestamp}`, historia: "Dois irmãos surfistas abriram uma barbearia com clima praiano, café artesanal e eventos culturais, a poucos passos da praia." },
+    { cidade: "Ribeirão Preto", img: `/barber3.jpg?t=${timestamp}`, historia: "Um barbeiro local famoso abriu a unidade com estilo rústico e vibe acolhedora, atraindo de fazendeiros a universitários." }
   ];
 
   const fadeIn = {
